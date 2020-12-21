@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My family book</h1>
+    <img src="https://cdn1.byjus.com/wp-content/uploads/2019/09/my-family-essay-for-class-1.jpeg" id="familybook">
+    <button type="button" onclick="slide()">Next</button>
+    <p id="clicknext">Click on the next button</p>
+
+    <style>
+        body{
+            text-align: center;
+        }
+        familybook{
+            width:100;
+            height: 100;
+        }
+    </style>
+    <script>
+       var family_members=["Me","My mother","My father"];
+       console.log(family_members);
+
+       var photos=["https://upload.wikimedia.org/wikipedia/en/thumb/e/ec/Lisa_Simpson.png/220px-Lisa_Simpson.png",
+       "https://media.npr.org/assets/img/2013/05/07/ap0908140151727_vert-06dfa531201681c1ebe2d126471494fdeb5048ae.jpg",
+    "https://i.pinimg.com/736x/0e/53/10/0e53107090a1bff58992e93aa5d2fcf6.jpg"];
+
+    var i=0;
+    function slide(){
+        document.getElementById("familybook").src=photos[i];
+        document.getElementById("clicknext").innerHTML=family_members[i];
+        i++;
+        if(i==3){
+            i=0;
+        }
+    }
+    </script>
+</body>
+</html>
